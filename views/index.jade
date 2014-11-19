@@ -1,0 +1,89 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/sco.message.css')
+    link(rel='stylesheet', href='/stylesheets/message.css')
+    link(rel='stylesheet', href='/css/messenger.css')
+    link(rel='stylesheet', href='/css/messenger-theme-flat.css')
+
+
+    .container
+        .row
+            .col-sm-3
+                .panel.panel-primary(style="margin-right:-10px;")
+                    .panel-heading
+                        span.glyphicon.glyphicon-user &nbsp;
+                        span 在线成员
+                    .panel-body
+                        .msg-list-body.user-content
+                            ul
+                                li(style="display:none;")
+                                    a(href="#")
+                                        img.img-thumbnail(src="/images/1.jpg")
+                                        span
+                                
+                    .panel-footer
+                        .btn-group
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-home
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-user
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-film
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-music
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-heart
+                            button.btn.btn-primary(type="button")
+                                span.glyphicon.glyphicon-envelope
+            .col-sm-9
+                .panel.panel-primary
+                    .panel-heading
+                        span.glyphicon.glyphicon-comment &nbsp;
+                        span 聊天室
+                        span#spanuser(style="float:right;")
+                    .panel-body
+                        .msg-list-body.msg-content
+                            
+                    .panel-footer
+                        .input-group
+                            .input-group-addon
+                                a(href="#")
+                                    img(src="/images/bq.png")
+                            .input-group-addon(style="padding-bottom:0px;")
+                                label(style="position:relative;")
+                                    img(src="/images/jt.jpg",title="send images",style="cursor:pointer;")
+                                    input#sendImage(type="file",value="images",style="display:none;")
+                            input.form-control#msg(type="text",placeholder="请输入聊天内容",onkeydown="javascript:keywordsMsg(event);")
+                            span.input-group-btn
+                                button.btn.btn-primary#sendMsg(type="button") 发送/Send
+
+    .modal.fade#myModal(tabindex="-1")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title#myModalLabel 请设置聊天昵称
+                .modal-body
+                    .form-group
+                        .input-group
+                            .input-group-addon 昵称
+                            input.form-control#username(type="text",value="陈泽彬",onkeydown="javascript:keywordsName(event);")
+                .modal-footer
+                    input.btn.btn-primary#btn-setName(type="button",value="应用昵称")
+
+    .modal.fade#setMsgToOne(tabindex="-1")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4.modal-title#myModalLabel1
+                .modal-body
+                    input.form-control#input_msgToOne(type="text",onkeydown="javascript:keywordsName1(event);")
+                            
+                .modal-footer
+                    input.btn.btn-primary#btn_toOne(type="button",value="发送/Send")
+    script(src="/socket.io/socket.io.js")
+    script(src='/javascripts/chat.js')
+    script(src='/javascripts/client.js')
+    script(src='/javascripts/sco.message.js')
+    script(src="/js/messenger.min.js")
+    script(src="/js/messenger-theme-flat.js")

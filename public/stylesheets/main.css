@@ -1,0 +1,72 @@
+li{
+	list-style-type: none;
+}
+body{
+	background:url(/images/bg.png) no-repeat center center fixed;
+	background-size: cover;
+}
+
+::-moz-selection{background:#4593BC;color:#FFFFFF;}
+::selection {background:#4593BC;color:#FFFFFF;}
+
+.msg-content{
+	height:500px;
+	margin: -14px;
+	overflow-x: hidden;
+	padding: 15px;
+}
+.msg-content ul{
+	
+}
+.msg-content li{
+	display:block;
+	margin-left: -40px;
+	padding-top: 30px;
+}
+.msg-content ul li img{
+	width: 45px;
+	height: 45px;
+}
+.msg-content ul li .my-msg{
+	float: right;
+	margin-right: 10px;
+}
+
+.row{
+	margin-top: 80px;
+}
+.user-content{
+	height:500px;
+	margin-top: -15px;
+	margin-left: -55px;
+	margin-right: -14px;
+	overflow-x: hidden;
+}
+.panel-body{
+	height: 500px;
+	width: 100%;
+}
+.user-content ul{
+	
+}
+.user-content ul li{
+	display:block;
+	border-bottom: 1px solid #ccc;
+}
+.user-content ul li a{
+	display:block;
+	text-decoration:none;
+}
+.user-content ul li a:hover{
+	display:block;
+	background-color: #8794a7;
+}
+.user-content ul li img{
+	width: 45px;
+	height: 45px;
+	margin: 5px 5px 5px 20px;
+}
+.user-content ul li a span{
+	color: #343434;
+	font-size: 13px;
+}

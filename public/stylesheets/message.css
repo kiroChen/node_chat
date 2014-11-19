@@ -1,0 +1,140 @@
+.message-history {
+    border-radius: 5px;
+    border: 2px solid #EEE;
+    min-width: 600px;
+    margin: auto;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.message-time {
+    height: 20px;
+    line-height: 18px;
+}
+.message-receive .message-time {
+    margin-left: 60px;
+    text-align: left;
+}
+.message-reply{
+    padding-bottom: 10px;
+}
+.message-receive{
+    padding-bottom: 10px;
+}
+.message-reply .message-time {
+    margin-right: 60px;
+    text-align: right;
+}
+
+.message-info {
+    position: relative;
+    overflow: hidden;
+}
+
+.message-content-box {
+    border-radius: 5px;
+    position: relative;
+    padding: 15px;
+    word-break: break-word;
+}
+
+.message-reply .message-content-box {
+    background: #b8db29;
+    color: #333;
+    margin-right: 60px;
+    float: right;
+}
+
+.message-receive .message-content-box {
+    background: #EEE;
+    color: #333;
+    margin-left: 60px;
+    float: left;
+}
+
+.message-content-box .arrow {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    top: 10px;
+}
+
+.message-reply .message-content-box .arrow {
+    border-color: transparent transparent transparent #b8db29;
+    right: -20px;
+}
+
+.message-receive .message-content-box .arrow {
+    border-color: transparent #EEE transparent transparent;
+    left: -20px;
+}
+
+.item-pics-box {
+    float: left;
+    margin-right: 10px;
+}
+
+.item-pic {
+    width: 40px;
+    height: 40px;
+}
+
+.message-content {
+    overflow: hidden;
+    word-wrap:break-word;
+    max-width: 500px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+}
+
+.message-receive .user-avatar {
+    left: 0;
+}
+
+.message-reply .user-avatar {
+    right: 0;
+}
+
+.send-message {
+    position: relative;
+    margin-top: 7px;
+    height: 40px;
+}
+.send-message .send-msg-btn {
+    float: right;
+    width: 75px;
+    line-height: 38px;
+    height: 38px;
+    margin-left: 5px;
+    font-size: 14px;
+    background-color: #FDFDFD;
+    border: 1px solid #D7D7D7;
+    text-align: center;
+}
+.send-message .message-input-box {
+    border-radius: 3px;
+    background: url("./images/write.png");
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position: 6px 14px;
+    padding: 0 0 0 25px;
+    background-color: #F9F9F9;
+    border: 1px solid #D7D7D7;
+    overflow: hidden;
+}
+.send-message input.message-input {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
