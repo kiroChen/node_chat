@@ -14,6 +14,7 @@ Features
 How to run
 =========
 * download the code then extract
+* run 'npm install'
 * run 'npm start'
 * open your browser and visit 'localhost:3000'
 
