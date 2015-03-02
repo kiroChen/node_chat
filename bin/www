@@ -8,7 +8,15 @@ var numCPUs = require('os').cpus().length;
 //解决并发问题的关键在于解决单线程问题，如何突破多线程.
 //这有部分原因在于：线程的内存消耗远小于进程。（这句话的描述好像有点问题）
 
-if (cluster.isMaster) {
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+  debug('node_chat server listening on port ' + server.address().port);
+});
+
+require('../chat').listen(server);
+
+/*if (cluster.isMaster) {
     console.log("master start...");
 
     // Fork workers.
@@ -31,4 +39,4 @@ if (cluster.isMaster) {
     });
 
     require('../chat').listen(server);
-}
+}*/
