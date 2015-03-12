@@ -6,7 +6,7 @@ A chat application built with Node.js and socketio,can send pictures and emojis,
 
 Online Demo
 =========
-link: http://node-chat-dd5dc.codingapp.com/
+link: http://node-chat-12934.coding.io/
 
 Features
 =========
